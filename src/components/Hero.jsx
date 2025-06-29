@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -32,8 +33,8 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Indulge in our carefully crafted menu featuring premium ingredients 
-          and innovative culinary techniques
+          Indulge in our carefully crafted menu featuring premium ingredients and
+          innovative culinary techniques
         </motion.p>
 
         <motion.div
@@ -42,12 +43,18 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <button className="px-8 py-4 bg-luxury-accent text-luxury-dark font-semibold rounded-lg hover:bg-gold-400 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+          <Link
+            to="/menu"
+            className="px-8 py-4 bg-luxury-accent text-luxury-dark font-semibold rounded-lg hover:bg-gold-400 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+          >
             View Menu
-          </button>
-          <button className="px-8 py-4 border-2 border-luxury-accent text-luxury-accent font-semibold rounded-lg hover:bg-luxury-accent hover:text-luxury-dark transition-all duration-300 transform hover:scale-105">
+          </Link>
+          <Link
+            to="/reservations"
+            className="px-8 py-4 border-2 border-luxury-accent text-luxury-accent font-semibold rounded-lg hover:bg-luxury-accent hover:text-luxury-dark transition-all duration-300 transform hover:scale-105"
+          >
             Make Reservation
-          </button>
+          </Link>
         </motion.div>
       </div>
 
